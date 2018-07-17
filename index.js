@@ -1,10 +1,15 @@
 for (var i = 1; i < 101; i++) {
 
-    let output = ""
+    let output = "";    
     
     // If number is divisible by 3
     if (i % 3 == 0) {
         output += "Fizz";
+    }
+
+    // If number is divisible by 13
+    if (i % 13 == 0) {
+        output += "Fezz";
     }
 
     // If number is divisible by 5
@@ -17,9 +22,12 @@ for (var i = 1; i < 101; i++) {
         output += "Bang";
     }
 
-    // If number is divisible by 11
+    // If number is divisible by 11 (overwritten by rule 13)
     if (i % 11 == 0) {
-        output = "Bong"
+        if (i % 13 == 0) {
+            output = "FezzBong";
+        }
+        output = "Bong";
     }
 
 
