@@ -17,6 +17,11 @@ for (var i = 1; i < 101; i++) {
         output += "Bang";
     }
 
+    // If number is divisible by 11
+    if (i % 11 == 0) {
+        output = "Bong"
+    }
+
 
     // Printing output
     if (output == "") {
