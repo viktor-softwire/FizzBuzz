@@ -1,4 +1,11 @@
-for (var i = 1; i < 101; i++) {
+const readline = require('readline-sync');
+
+// Prompt the user for upper limit
+console.log("Please enter upper limit: ");
+const response = readline.prompt();
+
+
+for (var i = 1; i < response + 1; i++) {
 
     let output = "";    
     
@@ -14,12 +21,21 @@ for (var i = 1; i < 101; i++) {
 
     // If number is divisible by 5
     if (i % 5 == 0) {
-        output += "Buzz";
+        if (i % 17 == 0) {
+            output = "Buzz" + output;
+        } else {
+            output += "Buzz";
+        }
+        
     }
 
     // If number is divisible by 7
     if (i % 7 == 0) {
-        output += "Bang";
+        if (i % 17 == 0) {
+            output = "Bang" + output;
+        } else {
+            output += "Bang";
+        }
     }
 
     // If number is divisible by 11 (overwritten by rule 13)
