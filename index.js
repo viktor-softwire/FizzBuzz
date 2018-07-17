@@ -25,7 +25,12 @@ for (var i = 1; i < (+upperlimit) + 1; i++) {
 
     // If number is divisible by 13
     if ((i % 13 == 0) && (rule13)) {
-        output += "Fezz";
+        if ((i % 17 == 0) && (rule17)) {
+            output = "Fezz" + output;
+        } else {
+            output += "Fezz";
+        }
+        
     }
 
     // If number is divisible by 5
@@ -50,7 +55,11 @@ for (var i = 1; i < (+upperlimit) + 1; i++) {
     // If number is divisible by 11 (overwritten by rule 13)
     if ((i % 11 == 0) && (rule11)) {
         if (i % 13 == 0) {
-            output = "FezzBong";
+            if (i % 17 == 0) {
+                output = "BongFezz";
+            } else {
+                output = "FezzBong";
+            }
         }
         output = "Bong";
     }
