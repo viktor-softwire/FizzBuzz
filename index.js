@@ -45,7 +45,7 @@ for (var i = 1; i < (+upperlimit) + 1; i++) {
 
     // If number is divisible by 7
     if ((i % 7 == 0) && (rule7)) {
-        if (i % 17 == 0) {
+        if ((i % 17 == 0) && (rule17)){
             output = "Bang" + output;
         } else {
             output += "Bang";
@@ -54,8 +54,8 @@ for (var i = 1; i < (+upperlimit) + 1; i++) {
 
     // If number is divisible by 11 (overwritten by rule 13)
     if ((i % 11 == 0) && (rule11)) {
-        if (i % 13 == 0) {
-            if (i % 17 == 0) {
+        if ((i % 13 == 0) && (rule13)) {
+            if ((i % 17 == 0) && (rule17)) {
                 output = "BongFezz";
             } else {
                 output = "FezzBong";
